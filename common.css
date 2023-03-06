@@ -1,0 +1,609 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  text-decoration: none;
+  border: none;
+  color: #333;
+  font-weight: normal;
+  font-family: "Microsoft Yahei";
+  box-sizing: border-box;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  /* &:hover{
+      outline: none;
+  } */
+}
+
+img{
+  max-width: 100%;
+}
+
+.buy_div{ height:200px;background-color:#ff0000;}
+
+main .login{
+    margin-top: 1.4rem;
+    background-image: -moz-linear-gradient( 90deg, rgb(216,179,114) 0%, rgb(251,214,149) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(216,179,114) 0%, rgb(251,214,149) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(216,179,114) 0%, rgb(251,214,149) 100%);
+    background-image: linear-gradient( 90deg, rgb(216,179,114) 0%, rgb(251,214,149) 100%);
+    box-shadow: 0 0 0.2rem 0 rgba(84, 67, 57, 0.3);
+    height: 0.9rem;
+    border-radius: 0.5rem;
+    font-size: 0.36rem;
+    color: rgb(255, 255, 255);
+    line-height: 0.9rem;
+    text-align: center;
+}
+
+.player_info{
+    height: 3.6rem;
+    position: relative;
+    background-color: #000;
+}
+.player_info .bgimg{
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
+    position: absolute;
+
+}
+
+.info .left_center img{
+    display: block;
+    width:40%;
+    height: auto;
+	margin: 0 auto;
+
+}
+
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+  width: 0px;  
+  height: 0px;  
+  background-color: #F5F5F5;  
+}  
+  
+/*定义滚动条轨道 内阴影+圆角*/  
+/* ::-webkit-scrollbar-track  
+{  
+  -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0);  
+  border-radius: 10px;  
+  background-color: #F5F5F5;  
+}   */
+  
+/*定义滑块 内阴影+圆角*/  
+/* ::-webkit-scrollbar-thumb  
+{  
+  border-radius: 10px;  
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+  background-color: #555;  
+}   */
+
+input[type="button"], input[type="submit"], input[type="search"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+
+textarea { -webkit-appearance: none;}   
+
+html,body{
+    max-width: 750px;
+    margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+
+/* .flex {
+	display: flex;
+	justify-content: space-between;
+	align-items:center;
+} */
+/* 解决配合.one-line只显示一行不生效问题 */
+/* .flex .flexOne {
+	flex: 1;
+	width: 0; 
+} */
+
+/* .flex i.flexOne,
+.flex span.flexOne,
+.flex input.flexOne,
+.flex select.flexOne,
+.flex i.flexOne::after,
+.flex span.flexOne::after,
+.flex input.flexOne::after,
+.flex select.flexOne::after {
+	display: list-item;
+	list-style: none;
+} */
+
+.one-line {
+	/*单行显示 多出部分显示省略号*/
+	/* display: -webkit-box; */
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: break-word;
+}
+
+.two-line {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.three-line {
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	word-wrap: break-word;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+
+/* .divider{
+  display: block;
+  height: 15px;
+}
+.divider-sm{
+  display: block;
+  height: 10px;
+} */
+
+.router-fade-enter-active, .router-fade-leave-active {
+  transition: opacity 0.1s;
+  will-change: opacity;
+}
+.router-fade-enter, .router-fade-leave-active {
+  opacity: 0.8;
+}
+
+.router-slid-enter-active, .router-slid-leave-active {
+  transition: all .4s;
+  will-change: transform,opacity;
+}
+.router-slid-enter, .router-slid-leave-active {
+  transform: translate3d(100%, 0, 0);
+  opacity: 0;
+}
+
+.router-slideUp-enter-active, .router-slideUp-leave-active {
+  transition: all .4s;
+  will-change: transform,opacity;
+}
+.router-slideUp-enter, .router-slideUp-leave-active {
+  transform: translate3d(0, 50%, 0);
+  opacity: 0;
+}
+
+.animated {
+    animation-duration: .4s;
+    animation-fill-mode: both;
+}
+@keyframes zoomIn {
+    from {
+        transform: translateX(7.5rem);
+    }
+
+    to{
+        transform: translateX(0rem);
+    }
+}
+
+.zoomIn {
+    animation-name: zoomIn;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-7.5rem);
+    }
+}
+
+.zoomOut {
+    animation-name: zoomOut;
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0,80%,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+.slideInUp {
+    animation-name: slideInUp;
+}
+@keyframes slideInDown {
+    0% {
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate3d(0, 80%, 0);
+    }
+}
+.slideInDown {
+    animation-name:slideInDown;
+}
+nav{
+    width: 100%;
+    height: 0.88rem;
+    max-width: 750px;
+}
+.navgat{
+    max-width: 750px;
+    position: fixed;
+    /*left: 0;*/
+    top: 0;
+    width: 100%;
+    padding: 0 0.3rem;
+    height: 0.88rem;
+    background-color: rgb(33, 36, 40);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+.navgat a{
+    display: block;
+}
+.navgat a img{
+    display: block;
+    width: 0.22rem;
+    height: 0.4rem;
+}
+.navgat p{
+    font-size: 0.34rem;
+    color: rgb(255, 255, 255);
+    line-height: 0.88rem;
+}
+.player_info{
+    height: 3.6rem;
+    position: relative;
+    background-color: #000;
+}
+
+.player_info .info{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding:0.4rem 0;
+}
+.info .right_top{
+    padding:  0 0.3rem;
+    height: 0.4rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.info .right_top  img:first-of-type{
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0 0.3rem;
+}
+.info .right_top img:nth-of-type(2){
+    display: block;
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.info .left_center{
+    padding: 0 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.info .left_center .right p{
+    font-size: 0.38rem;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.info .left_center .right .desc{
+    margin-top: 0.24rem;
+    display: flex;
+}
+.left_center .right .desc li{
+    border: 0.02rem solid #ffffff;
+    border-radius: 0.08rem;
+    padding: 0.08rem 0.14rem;
+    font-size: 0.24rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin-right: 0.1rem;
+}
+.info .bottom{
+    margin-top: 0.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+.info .bottom p{
+    margin-left: 0.4rem;
+    font-size: 0.3rem;
+    color: rgb(255, 255, 255);
+}
+.info .bottom .add{
+    background-color: rgba(0,0,0,0.4);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.12rem 0.14rem;
+}
+.info .bottom .add img{
+    display: block;
+    width: 0.26rem;
+    height: 0.26rem;
+}
+.info .bottom .add p{
+    margin-left: 0;
+    font-size: 0.28rem;
+    color: rgb(255, 255, 255);
+    -moz-transform: scale(0.93, 1);
+    -webkit-transform: scale(0.93, 1);
+    -ms-transform: scale(0.93, 1);
+    transform: scale(0.93, 1);
+}
+.player{
+    height: 1.82rem;
+    padding: 0.2rem;
+    background-color: #ffffff;
+}
+.pic_total{
+    height: 1.4rem;
+    overflow: hidden;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: auto;
+    will-change: scroll-position;
+    white-space: nowrap;
+    background-color: #fff;
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -o-box;
+    display: -ms-flexbox;
+}
+.pic_total li{
+    width: 1.4rem;
+    height:1.4rem;
+    position: relative;
+    margin-right: 0.2rem;
+}
+.pic_total img{
+    max-width: 1.4rem;
+    width: 1.4rem;
+    object-fit: cover;
+    height: 1.4rem;
+    margin-right: 0.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.ziliao{
+    margin-top: 0.2rem;
+    background-color: #ffffff;
+}
+.ziliao li{
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.01rem solid rgb(238, 238, 238);
+    flex-wrap: wrap;
+}
+
+.ziliao li>img{
+    width: 0.3rem;
+    height: 0.3rem;
+    display: block;
+    margin-right: 0.15rem;
+}
+.ziliao li p:first-of-type{
+    font-size: 0.3rem;
+    color: rgb(102, 102, 102);
+}
+.ziliao li p:nth-of-type(2){
+    font-size: 0.3rem;
+    color: rgb(160, 160, 160);
+}
+.ziliao li .say{
+    display: flex;
+    align-items: center;
+}
+.ziliao li .say img{
+    display: block;
+    width: 0.8rem;
+    height: 0.4rem;
+    margin-right: 0.1rem;
+}
+.ziliao li .say p{
+    font-size: 0.24rem;
+    -moz-transform: matrix( 1.0006400578495,0,0,0.99910561834295,0,0);
+    -webkit-transform: matrix( 1.0006400578495,0,0,0.99910561834295,0,0);
+    -ms-transform: matrix( 1.0006400578495,0,0,0.99910561834295,0,0);
+    transform: matrix( 1.0006400578495,0,0,0.99910561834295,0,0);
+}
+.leave_word{
+    margin-top: 0.2rem;
+    padding: 0.2rem 0;
+    background-color: #ffffff;
+}
+.leave_word .word{
+    font-size: 0.3rem;
+    color: rgb(102, 102, 102);
+    margin: 0.2rem 0.3rem;
+    padding-left: 0.1rem;
+    border-left: 0.06rem solid rgb(216, 179, 114);
+}
+.user{
+    padding: 0.2rem 0.3rem 0.3rem 0.3rem;
+    margin-top: 0.18rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    border-bottom: 0.01rem rgb(238, 238, 238) solid;
+}
+.user .head_pic{
+    display: block;
+    width:0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin-right: 0.2rem;
+}
+.user .user_info{
+    flex: 1;
+}
+.user .user_info p:first-of-type{
+    font-size: 0.28rem;
+    color: rgb(51, 51, 51);
+    line-height: 1.5;
+}
+.user .user_info p:nth-of-type(2){
+    font-size: 0.24rem;
+    color: rgb(153, 153, 153);
+    line-height: 1.5;
+}
+.user .user_info p:nth-of-type(3){
+    font-size: 0.3rem;
+    color: rgb(102, 102, 102);
+    line-height: 2;
+}
+.user .user_info .replay{
+    padding-left: 0.1rem;
+    width: 100%;
+    border-radius: 0.1rem;
+    background-color:rgb(245, 245, 245) ;
+    font-size: 0;
+}
+.user .user_info .replay span{
+    font-size: 0.28rem;
+    color: #666666;
+    line-height: 1.5;
+}
+
+.user .user_info .replay span:first-of-type{
+    color: rgb(216, 179, 114);
+
+}
+
+.add_friend {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.add_friend>img{
+    width: 0.44rem;
+    height: 1.14rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 120%);
+}
+
+.add_friend .beijing {
+    border-radius: 0.1rem;
+    width: 5.6rem;
+    height: 5.5rem;
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -75%);
+}
+
+.add_friend .beijing .liaojie {
+    font-size: 0.3rem;
+    font-family: "PingFang";
+    color: rgb(102, 102, 102);
+    padding: 0.2rem 0.4rem;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.add_friend .beijing .two {
+    margin: 0.74rem 0 0 1.28rem;
+    width: 3.08rem;
+    height: 3.08rem;
+    position: relative;
+}
+.add_friend .beijing .two img:first-of-type{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.add_friend .beijing .two img:nth-of-type(2){
+    position: absolute;
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.player2{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+
+}
+.swiper-container{
+    width: 100%;
+    max-width: 750px;
+    height: 5rem;
+    top:35%;
+    overflow: hidden;
+}
+.swiper-container .swiper-slide {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-container .swiper-slide img{
+    display: block;
+    max-width: 100%;
+    width:100%;
+    object-fit: cover;
+    height: 100%;
+}
+
